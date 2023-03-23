@@ -202,10 +202,13 @@ QDate WhenSystemBecomesOutdated() {
 }
 
 int AutoUpdateVersion() {
+#if 0 // mtp
 	if (IsGlibcLess228()) {
 		return 2;
 	}
 	return 4;
+#endif
+	return 5;
 }
 
 QString AutoUpdateKey() {
